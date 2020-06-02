@@ -1,0 +1,21 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: calculation-api
+
+##Config Api Docs
+springdoc:
+  swagger-ui:
+    path: swagger-ui.html
+    config-url: /v1/calculation/api-docs
+  api-docs:
+    path: /v1/calculation/api-docs
+
+##Config Logs##
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        web: DEBUG
+

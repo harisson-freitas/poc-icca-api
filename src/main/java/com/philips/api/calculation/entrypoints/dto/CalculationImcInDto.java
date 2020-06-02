@@ -1,17 +1,19 @@
-package com.philips.api.calculation.controllers.dto;
+package com.philips.api.calculation.entrypoints.dto;
 
 import lombok.*;
 
 /**
  * @author <a href="mailto:harisson.freitas@gmail.com">Harisson Freitas∴</a>
  * @project calculations
- * @since 04/05/20 - 13:50
-**/
+ * @since 04/05/20 - 13:44
+ **/
+
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
 @Getter
 @Setter
-public class BasicCalculationOutDto {
-    private Long result;
+public class CalculationImcInDto {
+    private Double height;
+    private Double weight;
 }

@@ -1,4 +1,4 @@
-package com.philips.api.calculation.controllers.documentations;
+package com.philips.api.calculation.entrypoints.controllers.documentations;
 
 /**
  * @author <a href="mailto:harisson.freitas@gmail.com">Harisson Freitas∴</a>
@@ -16,18 +16,19 @@ import org.springframework.http.ResponseEntity;
 import javax.websocket.server.PathParam;
 
 /*
- * Controller documentation of BasicCalculation
+ * Controller documentation of Calculation
  * API version v1/0.0.1
  * */
 
-@Tag(name = "Basic Calculation", description = "Basic calculation manipulation resource")
-public interface BasicCalculationControllerDocumentation {
+@Tag(name = "Calculation", description = "Calculation manipulation resource")
+public interface CalculationControllerDocumentation {
 
-    @Operation(summary = "Perform a sum", description = "Perform a sum between numbers", tags = {"sum"})
+    @Operation(summary = "Calculation IMC", description = "Perform IMC calculation - body mass index", tags = {"imc"})
     @ApiResponses({@ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR"),
             @ApiResponse(responseCode = "409", description = "CONFLICT"),
+            @ApiResponse(responseCode = "404", description = "NOT FOUND"),
             @ApiResponse(responseCode = "200", description = "OK")})
-    ResponseEntity calculateBasicSum(
-            @Parameter(description = "First value to be informed") @PathParam("{firstValue}") Long firstValue,
-            @Parameter(description = "Second value to be informed") @PathParam("{secondValue}") Long secondValue);
+    ResponseEntity calculateImc(
+            @Parameter(description = "height value to be informed ") @PathParam("{height}") Double height,
+            @Parameter(description = "weight value to be informed ") @PathParam("{weight}") Double weight);
 }

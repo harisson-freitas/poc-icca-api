@@ -29,8 +29,8 @@ public class OpenApiSwaggerConfiguration {
 
     private Info info() {
         return new Info()
-                .title("CALCULATIONS-API")
+                .title("CALCULATION-API")
                 .description("API containing the endpoints for the ICCA calculations settings")
-                .version("0.0,1");
+                .version("0.0.1");
     }
 }
